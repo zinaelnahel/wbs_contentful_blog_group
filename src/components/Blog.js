@@ -63,7 +63,7 @@ const Blog = () => {
             alt="Article"
           />
           <br />
-          <p>{blog.mainarticle}</p>
+          <p>{blog.conslusion}</p>
         </div>
       )}
     </div>
