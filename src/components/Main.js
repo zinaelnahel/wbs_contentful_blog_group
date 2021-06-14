@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Main.css'
 import Error from './Error'
 import Loading from './Loading'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { client } from '../client'
 
 const Main = () => {
@@ -11,6 +11,7 @@ const Main = () => {
 	const [isError, setIsError] = useState(false)
 	const [post, setPost] = useState(null)
 	const [scroll, setScroll] = useState(false)
+	const history = useHistory()
 
 
 	//get data from contentful
@@ -57,6 +58,18 @@ const Main = () => {
 	} else {
 		return (
 			<div className='card-wrapper'>
+
+				{post && post.map((article) => {
+					return (
+						<div key={article.sys.id} className='card'>
+						<h3>{article.fields.title}</h3>
+						<img src={article.fields.middleimage.fields.file.url} />
+						<button onClick={() => history.push(`/blog/${article.sys.id}`)}>
+							show more
+						</button>
+					</div>
+					)	
+				})}
 				{/* {post && post.map((short) => (
 					<div key={short.sys.id}>
 						<p>{short.fields.title}</p>
@@ -65,7 +78,7 @@ const Main = () => {
 				{/* {post && post.map((article) => (
 					<Blog article={article} key={article.sys.id} />
 				))} */}
-				{post && post.map((article, index) => {
+				{/* {post && post.map((article, index) => {
 					return (
 						<div key={index} className='card'>
 							<h3 className='card-title'>{article.fields.title}</h3>
@@ -75,7 +88,7 @@ const Main = () => {
 							</Link>
 						</div>
 					)
-				})}
+				})} */}
 				{/* {post && post.map((article) => {
 					return (
 						<div className='article' key={article.sys.id}>

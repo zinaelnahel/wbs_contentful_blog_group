@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
 import './Blog.css'
 import Loading from './Loading'
@@ -37,13 +37,17 @@ const Blog = () => {
 			{/* handling errors and loading */}
 			{isLoading && <Loading />}
 			{isError && <Error />}
-			{blog && (
+			{console.log(blog)}
+			{/* {blog && (
 				<div>
 					<h1>{blog.title}</h1>
-					<img className='img' src={blog.featureImg.fields.file.url} alt="Article" />
-					<p>{blog.description}</p>
+					<img className='img' src={blog.headimage.fields.file.url} alt="Article" />
+					<p>{blog.mainarticle}</p>
 				</div>
-			)}
+			)} */}
+
+
+
 		</div>
 
 	)

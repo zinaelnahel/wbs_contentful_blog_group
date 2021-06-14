@@ -14,6 +14,9 @@
     justify-content: center;
 	flex-direction: column;
 	text-align: left;
+    padding: 10px;
+    background: #c3c3c3;
+    border: none;
 }
 .card *{
     padding: 4px 0;
@@ -36,4 +39,8 @@
 .card-btn:hover{
     background: lightcoral;
     color: #fff;
+}
+.card img{
+    width: 200px;
+    border-radius: 8px;
 }
