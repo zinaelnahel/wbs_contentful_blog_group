@@ -57,16 +57,24 @@ const Main = () => {
 		return <Error />
 	} else {
 		return (
+			<main>
 			<div className='card-wrapper'>
-
+			<div className='card-header'>
+				<img className='header-img' src="https://www.pixartprinting.co.uk/blog/wp-content/uploads/2020/02/digital_nomad.png" alt="HEader Image" />
+			</div>
+			
 				{post && post.map((article) => {
 					return (
-						<div key={article.sys.id} className='card'>
-						<h3>{article.fields.title}</h3>
-						<img src={article.fields.middleimage.fields.file.url} />
-						<button onClick={() => history.push(`/blog/${article.sys.id}`)}>
-							show more
-						</button>
+						<div key={article.sys.id} className='card'>	
+							<img src={article.fields.middleimage.fields.file.url} />
+						<div className='div-title'>
+							<p className='card-title'><strong>{article.fields.title}</strong></p>
+							<p className='card-intro'>{article.fields.introduction.slice(0, 200)} ...</p>
+							<button onClick={() => history.push(`/blog/${article.sys.id}`)}>
+							Show More ...
+							</button>
+						</div>
+						
 					</div>
 					)	
 				})}
@@ -97,8 +105,9 @@ const Main = () => {
 						</div>
 					)
 				})} */}
-				<button onClick={scrollTop} style={{height: 40, width:20, display: scroll ? 'flex' : 'none'}} >scroll</button>
+				<button id='scroll-btn' onClick={scrollTop} style={{display: scroll ? 'flex' : 'none'}} >&#8593;</button>
 			</div>	
+		</main>
 		)
 	}
 }
