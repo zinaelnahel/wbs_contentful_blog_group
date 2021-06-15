@@ -39,7 +39,7 @@ const Blog = () => {
       {console.log(blog)}
       {blog && (
         <div className="container">
-          <h1>{blog.title}</h1>
+          <h2>{blog.title} </h2>
           <br />
           <img
             className="img-blog"
