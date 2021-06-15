@@ -1,0 +1,14 @@
+.team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     
+}
+.staff {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    background-color: lightsalmon;
+}
