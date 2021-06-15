@@ -42,7 +42,7 @@ const Blog = () => {
           <h1>{blog.title}</h1>
           <br />
           <img
-            className="img"
+            className="img-blog"
             src={blog.headimage.fields.file.url}
             alt="Article"
           />
@@ -50,7 +50,7 @@ const Blog = () => {
           <p>{blog.introduction}</p>
           <br />
           <img
-            className="img"
+            className="img-blog"
             src={blog.middleimage.fields.file.url}
             alt="Article"
           />
@@ -58,7 +58,7 @@ const Blog = () => {
           <p>{blog.mainarticle}</p>
           <br />
           <img
-            className="img"
+            className="img-blog"
             src={blog.bottomimage.fields.file.url}
             alt="Article"
           />
