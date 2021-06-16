@@ -107,7 +107,6 @@ const Main = () => {
 				})} */}
 			</div>	
 			<button id='scroll-btn' onClick={scrollTop} style={{display: scroll ? 'flex' : 'none'}} >&#8593;</button>
-
 		</main>
 		)
 	}
