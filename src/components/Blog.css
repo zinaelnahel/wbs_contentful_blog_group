@@ -1,30 +1,65 @@
-img {
+/* img {
   width: 30%;
 }
 h2 {
   background-color: #f0ebcc;
   padding: 30px;
   text-align: center;
-  color: #3f3697;
+  color: #222;
   line-height: 25px;
 }
 h3 {
-  color: #3f3697;
+  color: #222;
 }
 p {
   padding: 20px;
-  color: #3f3697;
+  color: #222;
   text-align: inherit;
 }
 
-img {
+img-blog {
   margin-left: 30px;
   border-radius: 12px;
-}
-.container {
+} 
+/* .container {
   padding: 90px;
   margin: 80px;
   background-color: #fff;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.13), 1px 2px 2px rgba(0, 0, 0, 0.1),
     -1px -2px 2px rgba(0, 0, 0, 0.05);
+} */
+
+.img-blog{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+    border-radius: 80px;
+}
+.img-blog1{
+width:40%;
+padding:20px;
+  border-radius: 30px;
+}
+
+.img-blog2{
+width:45%;
+padding:20px;
+  border-radius: 30px;
+}
+.container-blogPost{
+   padding: 10px;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.13), 1px 2px 2px rgba(0, 0, 0, 0.1),
+    -1px -2px 2px rgba(0, 0, 0, 0.05); 
+}
+.blogPostTitle{
+  line-height: 25px;
+   padding: 10px;
+ background-color: #f0ebcc;
+ text-align: center;
+}
+.paragraph{
+  line-height:30px;
 }
