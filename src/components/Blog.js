@@ -38,8 +38,9 @@ const Blog = () => {
       {isError && <Error />}
       {console.log(blog)}
       {blog && (
-        <div className="container">
-          <h2>{blog.title} </h2>
+
+        <div className="container-blogPost">
+          <h2 className="blogPostTitle">{blog.title} </h2>
           <br />
           <img
             className="img-blog"
@@ -47,23 +48,23 @@ const Blog = () => {
             alt="Article"
           />
           <br />
-          <p>{blog.introduction}</p>
+          <p className="paragraph">{blog.introduction}</p>
           <br />
           <img
-            className="img-blog"
+            className="img-blog1"
             src={blog.middleimage.fields.file.url}
             alt="Article"
           />
           <br />
-          <p>{blog.mainarticle}</p>
+          <p className="paragraph">{blog.mainarticle}</p>
           <br />
           <img
-            className="img-blog"
+            className="img-blog2"
             src={blog.bottomimage.fields.file.url}
             alt="Article"
           />
           <br />
-          <p>{blog.conslusion}</p>
+          <p className="paragraph">{blog.conslusion}</p>
         </div>
       )}
     </div>

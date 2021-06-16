@@ -66,9 +66,9 @@ const Main = () => {
 				{post && post.map((article) => {
 					return (
 						<div key={article.sys.id} className='card'>	
-							<img src={article.fields.middleimage.fields.file.url} />
+							<img className='article-img' src={article.fields.middleimage.fields.file.url} />
 						<div className='div-title'>
-							<p className='card-title'><strong>{article.fields.title}</strong></p>
+							<p className='card-title'>{article.fields.title}</p>
 							<p className='card-intro'>{article.fields.introduction.slice(0, 200)} ...</p>
 							<button onClick={() => history.push(`/blog/${article.sys.id}`)}>
 							Show More ...
@@ -105,8 +105,9 @@ const Main = () => {
 						</div>
 					)
 				})} */}
-				<button id='scroll-btn' onClick={scrollTop} style={{display: scroll ? 'flex' : 'none'}} >&#8593;</button>
 			</div>	
+			<button id='scroll-btn' onClick={scrollTop} style={{display: scroll ? 'flex' : 'none'}} >&#8593;</button>
+
 		</main>
 		)
 	}

@@ -3,12 +3,18 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px 0;
-  border-top: 1px solid lightgray;
-  background: #3d84b8;
+  padding: 14px 0;
+  background: #93c1e2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 footer a {
   text-decoration: none;
-  margin: 0 5%;
-  color: #f0ebcc;
+  color: #444;
+  font-size: 30px;
+}
+footer a:hover{
+  transition: color 0.3s ease-in;
+  color: #fff;
 }
