@@ -72,18 +72,20 @@ p.card-intro{
 }
 #scroll-btn{
     font-size: 26px;
-    font-weight: 900;
+    font-weight: 700;
     background: transparent;
     border: none;
-    padding: 6px 12px;
-    margin: 40px;
+    padding: 6px 16px;
+    margin: 40px 40px 80px 40px;
     cursor: pointer;
+    position: sticky;
+    float: right;
 }
 #scroll-btn:hover{
     transition: background 0.6s ease-in;
     border: 1px solid #93c1e2;
     background: #93c1e2;
     color: #fff;
-    border-radius: 24px;
+    border-radius: 50%;
     float: right;
 }

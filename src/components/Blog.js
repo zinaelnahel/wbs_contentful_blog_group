@@ -10,6 +10,8 @@ const Blog = () => {
   const [blog, setBlog] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+	const [scroll, setScroll] = useState(false)
+
 
   useEffect(() => {
     setIsLoading(true);
@@ -30,6 +32,20 @@ const Blog = () => {
         setIsError(true);
       });
   }, []);
+
+  //handling scroll to top 
+	const testScrollTop = () => {
+		if(!scroll && window.pageYOffset > 400){
+			setScroll(true)
+		} else if (scroll && window.pageYOffset <= 400){
+			setScroll(false)
+		}
+	}
+
+	const scrollTop = () => {
+		window.scrollTo({top: 0, behavior: 'smooth'})
+	}
+	window.addEventListener('scroll', testScrollTop)
 
   return (
     <div>
@@ -67,6 +83,8 @@ const Blog = () => {
           <p className="paragraph">{blog.conslusion}</p>
         </div>
       )}
+      <button id='scroll-btn' onClick={scrollTop} style={{display: scroll ? 'flex' : 'none'}} >&#8593;</button>
+
     </div>
   );
 };
