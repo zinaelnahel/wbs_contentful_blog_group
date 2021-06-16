@@ -3,7 +3,7 @@ main{
     margin: 0 auto;
 }
 .header-img{
-    opacity: 0.6;
+    opacity: 0.8;
     width: 100vw;
     max-height: 80%;
     margin: 0 auto;
@@ -14,7 +14,6 @@ main{
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 .card {
     display: flex;
